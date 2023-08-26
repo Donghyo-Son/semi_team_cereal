@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자페이지 리스트</title>
+    <link rel="stylesheet" href="/css/adminPageList.css">
+    <script src="/javascript/jquery-3.7.0.js"></script>
+</head>
+<body>
+    
+    <!---------------------------------------------------------------------------->
+    
+    <div class="side-wrap">
+        <div class="wrap-title">관리자페이지</div>
+        <div class="myPage-list-wrap">
+            <ul>
+                <li><a href="/adminPage/allMemberList?btn=0" class="sideButton" id="allMemberListBtn" onclick="changeBtn(event)">회원목록</a></li>
+                <li><a href="/adminPage/allProductList?btn=1" class="sideButton" id="allProductListBtn" onclick="changeBtn(event)">등록 상품 현황</a></li>
+                <li><a href="/adminPage/orderStatusManagement?btn=2" class="sideButton" id="orderStatusManagementBtn" onclick="changeBtn(event)">주문 현황 관리</a></li>
+                <li><a href="/adminPage/insertProduct?btn=3" class="sideButton" id="insertProductBtn" onclick="changeBtn(event)">상품 등록</a></li>
+                <li><a href="/adminPage/insertNews?btn=4"class="sideButton" id="insertNewsBtn" onclick="changeBtn(event)">기사 등록</a></li>
+                <li><a href="/adminPage/insertEvent?btn=5"class="sideButton" id="insertEventBtn" onclick="changeBtn(event)">이벤트 등록</a></li>
+                <li><a class="sideButton" id="myPageBtn" onclick="changeBtn(event)">당첨자 발표 등록</a></li>
+                <li><a href="/notice/writeFrm" class="sideButton" id="noticeWriteFrmBtn" onclick="changeBtn(event)">공지사항 등록</a></li>
+                <li><a class="sideButton" id="myPageBtn" onclick="changeBtn(event)">대시보드<span class="beta">Beta</span></a></li>
+            </ul>
+        </div> <!--<div class="myPage-list-wrap">-->
+    </div> <!--<div class="side-wrap">-->
+
+    <!---------------------------------------------------------------------------->
+
+    <script src="/javascript/adminPageList.js"></script>
+    <script th:inline="javascript">
+        const btnValue = [[${btn}]];
+        //console.log(btnValue);
+        if(btnValue == 0){
+            const allMemberList = document.querySelector("#allMemberListBtn");
+            allMemberList.classList.add("active");
+        }else if(btnValue == 1){
+            const allProductList = document.querySelector("#allProductListBtn");
+            allProductList.classList.add("active");
+        }else if(btnValue == 2){
+            const orderStatusManagement = document.querySelector("#orderStatusManagementBtn");
+            orderStatusManagement.classList.add("active");
+        }else if(btnValue == 3){
+            const insertProduct = document.querySelector("#insertProductBtn");
+            insertProduct.classList.add("active");
+        }else if(btnValue == 4){
+            $("#insertNewsBtn").addClass("active");
+        }else if(btnValue == 5){
+            $("#insertEventBtn").addClass("active");
+        }else if(btnValue == 6){
+            
+        }else if(btnValue == 7){
+            const noticeWriteFrm = document.querySelector("#noticeWriteFrmBtn");
+            noticeWriteFrm.classList.add("active");
+        }else if(btnValue == 8){
+            
+        }
+    </script>
+</body>
+</html>

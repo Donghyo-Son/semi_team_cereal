@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ESSENTIAL#</title>
+<link rel="stylesheet" href="/css/event.css">
+<script src="/javascript/jquery-3.7.0.js"></script>
+</head>
+<body>
+	<th:block th:include="common/header"></th:block>
+	<div class="us-wrap">
+		<div class="us-title">
+			<br>
+			<h1>이벤트</h1>
+		</div>
+		<ul class="event-tab">
+			<li><a href="javascript:void(0);">진행 중 이벤트</a></li>
+			<li><a href="javascript:void(0);">당첨자 발표</a></li>
+		</ul>
+		<!--진행중-->
+		<div class="event-content">
+				<div class="event-detail" th:each="event : ${eventList}">
+				<a th:href="@{/event/view(eventNo=${event.eventNo})}">
+					<img th:if="${event.eventStatus}=='1'" th:src="@{/img/event/}+${event.thumbnail}">
+					<h3 th:text="${event.eventTitle}"></h3>
+					<span th:text="${event.startDate}"></span>
+					<span>~</span>
+					<span th:text="${event.endDate}"></span>
+				</a>
+				</div>
+		</div>
+		<!--당첨자-->
+		<div class="event-content">
+			<div class="page-content">
+				<table class="tbl notice-tbl">
+					<tr>
+						<th style="width: 10%">번호</th>
+						<th style="width: 45%;">제목</th>
+						<th style="width: 15%;">작성자</th>
+						<th style="width: 30%;">작성일</th>
+					</tr>
+				</table>
+				<div id="pageNavi" value="1"></div>
+			</div>
+		</div>
+	</div>
+	<th:block th:include="common/footer"></th:block>
+	<script src="/javascript/eventList.js"></script>
+</body>
+</html>

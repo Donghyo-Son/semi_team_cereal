@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문내역 / 배송현황</title>
+    <link rel="stylesheet" href="/css/orderHistory-deliveryStatus_1.css">
+	<script src="/javascript/jquery-3.7.0.js"></script>
+</head>
+<body>
+    
+    <th:block th:include="common/header"></th:block>
+    
+    <!---------------------------------------------------------------------------->
+	<div class="content-wrap">
+
+
+		<th:block th:include="myPage/myPageList"></th:block>
+
+
+	    <div class="orderHistory-deliveryStatus-wrap">
+	    
+
+		        
+		        <h2>주문내역 / 배송현황</h2>
+		        
+		        <div class="input-date-wrap">
+		            <div>직접입력 조회</div>
+		            <div>
+						<form action="/myPage/orderHistory-deliveryStatus_1" method="get">
+							<input type="date" name="startDate" id="firstDate" th:value="${startDate}"> ~ <input type="date" name="endDate" id="secondDate" th:value="${endDate}">
+							<button type="submit" class="dateBtn">조회하기</button>
+							<input type="hidden" name="btn" value="1">
+							<input type="hidden" name="reqPage" value="1">
+						</form>
+		            </div>
+		        </div> <!--<div class="input-date-wrap">-->
+		
+		        <div class="date-message">
+		            <p th:text="${startDate}"></p> <span id="between">&nbsp;~&nbsp;</span> <p th:text="${endDate}"></p>
+		            <p>&nbsp;기간동안 구매하신 내역입니다.</p><br>
+		            <span class="guide-ment">주문번호를 클릭하시면 주문내역을 확인하실 수 있습니다.</span> 
+				</div> <!--<div class="date-message">-->
+		
+		        <div class="order-table">
+		            <table>
+		                <thead>
+		                    <tr>
+		                        <th>주문번호</th><th>상품정보</th><th>수량</th><th>결제금액</th><th>배송현황</th>
+		                    </tr>
+		                </thead>
+		                <!--테스트 삽입 <td>-->
+		                <tbody id="js-load">	
+		                    <tr th:each="order:${orderList}" th:onclick="orderHistory([[${order.orderNo}]])">
+		                        <td th:text="${order.orderNo}"></td><td th:text="${order.productName}"></td><td th:text="${order.orderAmount}"></td><td th:text="${order.totalPrice}"></td><td th:text="${order.orderStatus}"></td>                   
+		                    </tr>  
+		                </tbody>   
+		            </table>
+		        </div> <!--<div class="order-table">-->
+		
+		        <!-- <div class="moreBtn-wrap" id="js-btn-wrap">
+		            <button type="button" class="moreBtn" th:totalCount="${totalCount}" currentCount="0" value="1">더보기</button>
+		        </div> <div class="moreBtn-wrap"> -->
+		
+				<div id="pageNavi" th:utext="${pageNavi}"></div>	
+		
+	    </div> <!--<div class="orderHistory&deliveryStatus-wrap">-->
+
+	</div> <!-- <div class="content-wrap"> -->
+    <!---------------------------------------------------------------------------->
+    
+    <th:block th:include="common/footer"></th:block>
+    
+	<script>
+		function orderHistory(orderNo){
+			location.href='/myPage/orderHistory-deliveryStatus_2?btn=1&orderNo='+orderNo;
+		}
+	</script>
+</body>
+</html>

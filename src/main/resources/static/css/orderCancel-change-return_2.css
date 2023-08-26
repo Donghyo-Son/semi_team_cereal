@@ -1,0 +1,162 @@
+/*주문취소/교환/반품 2*/
+/*orderCancel-change-return_2.html*/
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;  
+    color: #333333;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+
+.content-wrap{
+    display: flex;
+    width: 1200px;
+    padding: 50px 0 80px 0;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+.orderCancel-change-return-wrap{
+    width: 1200px;
+}
+
+h2{
+    padding-bottom: 10px;
+}
+
+
+.select-tap-container{
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+input[name=orderCancel-change-return-tap]+label{
+    border: 1px solid black;
+    float: left;
+    display: block; /*display 속성이 설정되지 않으면 너비, 높이 속성이 적용되지 않음*/
+    width: 200px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+input[name=orderCancel-change-return-tap]:checked+label{
+    background-color: #1C8394;
+    border: 1px solid #1C8394;
+    color: #fff;
+}
+input[name=orderCancel-change-return-tap]{
+    display: none;
+}
+
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px; 
+}
+th {
+    height: 50px;
+    text-align: center;
+    border-top: 2px solid #333;
+    border-bottom: 1.5px solid #333;
+}
+td {
+    height: 50px;
+    border-bottom: 1px solid rgb(244, 244, 244);
+    text-align: center;
+}
+.orderCancel-change-return-register-table>table>thead>tr>:first-child{
+    width: 150px;
+}
+.select-tap{
+    overflow: hidden;
+}
+.orderCancel-change-return-register-table>table>thead>tr>:last-child{
+    clear: both;
+}
+.orderCancel-change-return-register-table>table>tbody>tr>:first-child{
+    width: 150px;
+}
+.img-container{
+    width: 180px;
+    padding-top: 4px;
+}
+.orderCancel-change-return-register-table>table{
+    margin-bottom: 30px;
+}
+
+
+
+.reason{
+    width: 100px;
+}
+.insertFile-btn{
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    color: #686868;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.reason-detail{
+    padding-top: 4px;
+}
+.reason-detail-text{
+    width: 770px;
+    height: 400px;
+    font-size: 1em;
+    padding: 10px;
+    resize: none;
+    border: 1px solid #333;
+    outline: none;
+}
+
+
+
+input[name=selectTap]+label{
+    display: block;
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    cursor: pointer;
+}
+input[name=selectTap]:checked+label{
+    background-color: #1C8394;
+    border: 1px solid #1C8394;
+    color: #fff;
+}
+input[name=selectTap]{
+    display: none;
+}
+
+
+
+.registerBtn-wrap{
+    text-align: right;
+}
+.registerBtn{
+    background-color: #1C8394;
+    border: none;
+    width: 150px;
+    height: 40px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}

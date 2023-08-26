@@ -1,0 +1,106 @@
+/*주문내역 / 배송현황 2*/
+/*orderHistory-deliveryStatus_2.html*/
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;  
+    color: #333333;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.content-wrap{
+    display: flex;
+    width: 1200px;
+    padding: 50px 0 80px 0;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.like-it-wrap{
+    width: 1200px;
+}
+
+h2{
+    padding-bottom: 10px;
+}
+
+.like-it-wrap>:nth-child(2){
+    padding-bottom: 10px;
+}
+.guide-ment{
+    color: rgb(155, 155, 155);
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+
+
+table{
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    width: 100%;
+}
+td {
+    border-top: 2px solid #333;
+    border-bottom: 1px solid rgb(244, 244, 244);
+    text-align: center;
+    height: 164px;
+}
+.img-container{
+    width: 180px;
+    padding-top: 3px;
+}
+.product-info{
+    width: 380px;
+    cursor: pointer;
+}
+.product-info:hover{
+    text-decoration: underline;
+}
+.button-container{
+    width: 120px;
+}
+.removeBtn{
+    width: 100px;
+    height: 35px;
+    color: #fff;
+    border: none;
+    background-color: #1C8394;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 2.5px;
+}
+.cartBtn{
+    width: 100px;
+    height: 35px;
+    color: #1C8394;
+    border: 1px solid #1C8394;
+    background-color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 2.5px;
+}
+
+
+.moreBtn-wrap{
+    text-align: center;
+}
+.moreBtn{
+    width: 300px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: #1C8394;
+    cursor: pointer;
+}

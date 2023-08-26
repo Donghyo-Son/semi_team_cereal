@@ -1,0 +1,246 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+    font-family: 'Noto Sans KR', sans-serif;
+}
+*{
+	margin:0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #333333;
+    font-size: 18px;
+}
+.essential{
+    font-weight: bold;
+}
+.sharp{
+    color: #A52502;
+    font-weight: 900;
+}
+.us-wrap{
+	width: 1200px;
+    margin: 0 auto;
+}
+.us-title{
+	margin: 100px 0;
+}
+.us-title h1{
+    font-size: 32px;
+    text-align: center;
+}
+.us-title p{
+    text-align: center;
+}
+/********************여기부터**************************/
+/*상단 탭*/
+.event-tab{
+    list-style-type: none;
+    overflow: hidden;
+    margin-left: 120px;
+}
+.event-tab>li{
+    float: left;
+    width: 200px;
+
+    box-sizing: border-box;
+    text-align: center;
+}
+.event-tab>li>a{
+    display: block;
+    text-decoration: none;
+    box-sizing: border-box;
+    width: 200px;
+    height: 60px;
+    line-height: 53px;
+    border-top: 5px solid transparent;
+    border: 1px solid #333333;
+}
+.event-tab>li:first-child>a{
+    border-right: transparent;
+}
+.event-tab>li>a.event-active{
+    color:#1C8394;
+    border-top: 5px solid #1C8394;
+    border-bottom: none;
+    font-weight: 900;
+    font-size: 1.1em;
+}
+.event-content{
+    margin: 50px 120px;
+    overflow: hidden;
+}
+.event-detail{
+    float: left;
+    margin-bottom:50px;
+    width:450px
+}
+.event-detail>a{
+	text-decoration: none;
+}
+.event-detail>a>img{
+    border-radius: 10px;
+    width: 450px;
+    height: 150px;
+}
+.event-detail:nth-child(2n-1){
+    margin-right: 50px;
+}
+.event-detail>span{
+	font-size: 16px;
+}
+
+
+
+/**********************당첨자 발표**********************/
+/* page-content */
+
+.page-content{
+    width: 960px;
+    margin-right: 20px;
+    flex-grow: 1;
+}
+
+.page-title{
+    display: flex;
+}
+.content-title{
+    float: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.page-slogan{
+    line-height: 40px;
+    padding-left: 13px;
+    letter-spacing: -0.3px;
+}
+
+/********************* view-mid-wrap *********************/
+.view-mid-wrap{
+    margin-bottom: 100px;
+    border-top: 2px solid rgb(51, 51, 51);
+}
+.line-wrap{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgb(244, 244, 244);
+}
+.title-line{
+    width: 100%;
+    padding: 13px 0px 13px 20px;
+    background-color: rgb(247, 245, 248);
+    border-top: 1px solid rgb(244, 244, 244);
+    text-align: center;
+    font-weight: 500;
+}
+.content-line{
+	width: 100%;
+    padding: 13px 20px 13px 20px;
+    align-self: center;
+    text-align: right;
+}
+.view-content-wrap{
+    padding: 30px 30px 100px;
+    border-bottom: 1px solid rgb(128, 128, 128);
+}
+.view-content{
+	text-align: center;
+}
+.view-content img{	
+	width:100% !important;
+}
+.btn-line2{
+    display: flex;
+    width: 100%;
+    padding: 20px 0px;
+    -webkit-box-pack: end;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* basic-btn 버튼 기본 디자인 */
+.basic-btn{
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    width: 130px;
+    height: 50px;
+    color: #fff;
+    background-color: #1C8394;
+    border: 0px none;
+    line-height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.cancel-btn{
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 130px;
+    height: 50px;
+    color: #1C8394;
+    background-color: rgb(230, 230, 230);
+    border: 0px none;
+    line-height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/* table */
+.tbl{
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+.tbl th,
+.tbl td{
+    padding: 1rem;
+    text-align: center;
+}
+
+.notice-tbl tr:first-child{
+    border-bottom: 1px solid #333;
+    border-top: 2px solid #333;
+}
+.notice-tbl tr:not(:first-child){
+    border-bottom: 1px solid rgb(244, 244, 244);
+}
+
+/*********** 페이징 디자인 ***********/
+.pagination {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+.pagination > li {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  overflow: hidden;
+}
+.pagination.circle-style > li {
+  border-radius: 50%;
+}
+.pagination > li > a.page-item {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  text-decoration: none;
+}
+.pagination > li > a.page-item > span.material-icons {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+}
+.pagination .page-item.active-page {
+  background-color: #1C8394;
+  color: #fff;
+}

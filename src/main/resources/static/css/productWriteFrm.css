@@ -1,0 +1,190 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.content-wrap{
+    display: flex;
+    width: 1200px;
+    padding: 50px 0 80px 0;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+.product-writeFrm{
+    width: 100%;
+    overflow: hidden;
+}
+
+.product-writeFrm-title{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.product-writeFrm-tbl{
+    border-collapse: separate;
+    border-spacing: 0 30px;
+    width: 800px;
+}
+
+.product-writeFrm-tbl th{
+    width: 30%;
+}
+
+.product-writeFrm-tbl td{
+    width: 70%;
+}
+
+.input-form{
+    height: 30px;
+    padding-left: 5px;
+    border: none;
+    border-bottom: 1px solid #333333;
+    margin: 5px;
+    display: block;
+    float: left;
+}
+
+.input-form:not([name="optionName"]):not([name="optionAmount"]){
+    width: 90%;
+}
+
+.input-form:focus{
+    outline: none;
+}
+
+.product-writeFrm-tbl select{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #333333;
+}
+
+.product-writeFrm-tbl select:focus{
+    outline: none;
+}
+
+.option-addBtn{
+    border: 0;
+    width: 40px;
+    height: 32px;
+    background-color: #1C8394;
+    color: white;
+    display: block;
+    float: left;
+}
+
+.option-delBtn{
+    border: 0;
+    width: 40px;
+    height: 32px;
+    background-color: #A52502;
+    color: white;
+    display: block;
+    float: left;
+}
+
+.product-writeFrm-tbl p{
+    font-size: 15px;
+    color: #b1b1b1;
+}
+
+.product-detail{
+    border-bottom: 20px solid #fff;
+    border-top: 20px solid #fff;
+}
+
+.text-form{
+    padding: 10px;
+    width: 500px;
+    height: 300px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.text-form:focus{
+    outline: none;
+}
+
+.product-writeFrm-sumbitBtn{
+    text-align: center;
+    margin: 30px;
+}
+.product-writeFrm-sumbitBtn>button:hover{
+    cursor: pointer;
+}
+.product-writeFrm-sumbitBtn>button{
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: #1C8394;
+    color: white;
+    font-size: 18px;
+    line-height: 50px;
+}
+
+#main-category, #sub-category{
+    margin: 5px;
+}
+
+#sub-category{
+    display: none;
+}
+
+/* 파일 첨부 버튼 바꾸기 */
+.filebox{
+    overflow: hidden;
+}
+
+.upload-name, .upload-name2 {
+    display: block;
+    float: left;
+    height: 30px;
+    padding-left: 5px;
+    border: none;
+    border-bottom: 1px solid #333333;
+    color: #333333;
+    width: 75%;
+    margin: 5px;
+}
+
+.upload-name, .upload-name2:focus{
+    outline: none;
+}
+
+.filebox label {
+    display: inline-block;
+    color: #fff;
+    vertical-align: middle;
+    background-color: #1C8394;
+    cursor: pointer;
+    height: 30px;
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 30px;
+    width: 70px;
+    text-align: center;
+}
+
+.filebox input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
